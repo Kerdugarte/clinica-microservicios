@@ -1,0 +1,11 @@
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/controller/AuthController.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/repository/CredencialRepository.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/service/AuthService.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/dto/RegistroRequestDTO.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/AuthServiceApplication.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/model/Credencial.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/service/AuthServiceImpl.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/exception/GlobalExceptionHandler.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/dto/LoginResponseDTO.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/dto/LoginRequestDTO.java
+/Users/kerlydugarte/Desktop/clinica-microservicios/auth-service/src/main/java/com/clinica/auth_service/exception/AuthException.java
