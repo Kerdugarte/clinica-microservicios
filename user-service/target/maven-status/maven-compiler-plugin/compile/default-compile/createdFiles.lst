@@ -1,0 +1,10 @@
+com/clinica/user_service/dto/UserResponseDTO.class
+com/clinica/user_service/dto/UserRequestDTO.class
+com/clinica/user_service/repository/UserRepository.class
+com/clinica/user_service/model/User.class
+com/clinica/user_service/exception/GlobalExceptionHandler.class
+com/clinica/user_service/controller/UserController.class
+com/clinica/user_service/service/UserService.class
+com/clinica/user_service/UserServiceApplication.class
+com/clinica/user_service/service/UserServiceImpl.class
+com/clinica/user_service/exception/UserNotFoundException.class
