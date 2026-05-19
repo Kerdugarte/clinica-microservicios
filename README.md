@@ -28,11 +28,13 @@ Sistema desarrollado para la gestión de una clínica usando arquitectura de mic
 
 - Eureka Server
 - API Gateway
-- User Service
+- Auth Service
 - Security Service
+- User Service
 - MS Pacientes
 - MS Doctores
 - MS Reservas
+- MS Historial
 - MS Pagos
 - MS Notificaciones
 - MS Reportes
@@ -99,15 +101,29 @@ El archivo se encuentra en:
 database/init-all-databases.sql
 
 
+
 ## Orden para levantar el proyecto
 
 1. Eureka Server
+
 2. API Gateway
-3. User Service
+
+3. Auth Service
+
 4. Security Service
-5. MS Pacientes
-6. MS Doctores
-7. MS Reservas
-8. MS Pagos
-9. MS Notificaciones
-10. MS Reportes
+
+5. User Service
+
+6. MS Pacientes
+
+7. MS Doctores
+
+8. MS Historial
+
+9. MS Reservas
+
+10. MS Pagos
+
+11. MS Notificaciones
+
+12. MS Reportes
