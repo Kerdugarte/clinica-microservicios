@@ -87,7 +87,6 @@ Para ejecutar el proyecto localmente se deben tener instaladas y configuradas la
 
 Antes de ejecutar los microservicios, se debe abrir XAMPP e iniciar los servicios:
 
-```text
 Apache
 MySQL
 
