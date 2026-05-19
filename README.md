@@ -127,3 +127,9 @@ database/init-all-databases.sql
 11. MS Notificaciones
 
 12. MS Reportes
+
+## Evidencias en video
+
+Los videos de demostración técnica están en la carpeta `/evidencias-video`.
+
+Para visualizarlos, presionar `View raw` o descargar el archivo, ya que GitHub no siempre previsualiza videos `.mov`.
