@@ -90,7 +90,7 @@ Antes de ejecutar los microservicios, se debe abrir XAMPP e iniciar los servicio
 Apache
 MySQL
 
-2. Crear las bases de datos
+##2. Crear las bases de datos
 
 El proyecto incluye un script SQL general para crear las bases de datos y tablas necesarias.
 
