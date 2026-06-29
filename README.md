@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Nombre del proyecto
 
 Sistema de Gestión Clínica - Microservicios
@@ -472,4 +472,4 @@ Los archivos `.jar` compilados se distribuyen únicamente mediante enlaces exter
 | ZIP Nativo                       | Pendiente                    |
 | ZIP Docker                       | Pendiente                    |
 | Video defensa                    | Pendiente                    |
->>>>>>> b083317 (docs: update README and gitignore for final delivery)
+
