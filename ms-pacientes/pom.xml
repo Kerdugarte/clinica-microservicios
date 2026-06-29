@@ -23,6 +23,15 @@
         </dependency>
 
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+
+        <dependency>
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>

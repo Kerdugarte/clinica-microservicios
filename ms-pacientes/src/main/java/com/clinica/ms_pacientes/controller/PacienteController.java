@@ -20,10 +20,23 @@ import com.clinica.ms_pacientes.dto.PacienteRequestDTO;
 import com.clinica.ms_pacientes.dto.PacienteResponseDTO;
 import com.clinica.ms_pacientes.service.PacienteService;
 
+<<<<<<< HEAD
+=======
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/pacientes")
+<<<<<<< HEAD
+=======
+@Tag(name = "Pacientes", description = "Endpoints para la gestión de pacientes de la clínica")
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
 public class PacienteController {
 
     private static final Logger log = LoggerFactory.getLogger(PacienteController.class);
@@ -34,6 +47,14 @@ public class PacienteController {
         this.pacienteService = pacienteService;
     }
 
+<<<<<<< HEAD
+=======
+    @Operation(summary = "Crear paciente", description = "Registra un nuevo paciente en el sistema clínico.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Paciente creado correctamente"),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos o paciente ya existente")
+    })
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
     @PostMapping
     public ResponseEntity<PacienteResponseDTO> crearPaciente(@Valid @RequestBody PacienteRequestDTO requestDTO) {
         log.info("Solicitud para crear paciente con RUT: {}", requestDTO.getRut());
@@ -41,47 +62,119 @@ public class PacienteController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
+<<<<<<< HEAD
+=======
+    @Operation(summary = "Listar pacientes", description = "Obtiene el listado completo de pacientes registrados.")
+    @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
     @GetMapping
     public ResponseEntity<List<PacienteResponseDTO>> listarPacientes() {
         log.info("Solicitud para listar pacientes");
         return ResponseEntity.ok(pacienteService.listarPacientes());
     }
 
+<<<<<<< HEAD
     @GetMapping("/{id}")
     public ResponseEntity<PacienteResponseDTO> buscarPacientePorId(@PathVariable Long id) {
+=======
+    @Operation(summary = "Buscar paciente por ID", description = "Obtiene la información de un paciente mediante su identificador.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Paciente encontrado"),
+            @ApiResponse(responseCode = "404", description = "Paciente no encontrado")
+    })
+    @GetMapping("/{id}")
+    public ResponseEntity<PacienteResponseDTO> buscarPacientePorId(
+            @Parameter(description = "Identificador del paciente", example = "1")
+            @PathVariable ("id") Long id) {
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
         log.info("Solicitud para buscar paciente por ID: {}", id);
         return ResponseEntity.ok(pacienteService.buscarPacientePorId(id));
     }
 
+<<<<<<< HEAD
     @GetMapping("/buscar")
     public ResponseEntity<PacienteResponseDTO> buscarPacientePorRut(@RequestParam String rut) {
+=======
+    @Operation(summary = "Buscar paciente por RUT", description = "Obtiene la información de un paciente mediante su RUT.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Paciente encontrado"),
+            @ApiResponse(responseCode = "404", description = "Paciente no encontrado")
+    })
+    @GetMapping("/buscar")
+    public ResponseEntity<PacienteResponseDTO> buscarPacientePorRut(
+            @Parameter(description = "RUT del paciente", example = "12345678-9")
+            @RequestParam ("rut") String rut) {
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
         log.info("Solicitud para buscar paciente por RUT: {}", rut);
         return ResponseEntity.ok(pacienteService.buscarPacientePorRut(rut));
     }
 
+<<<<<<< HEAD
     @PutMapping("/{id}")
     public ResponseEntity<PacienteResponseDTO> actualizarPaciente(
             @PathVariable Long id,
+=======
+    @Operation(summary = "Actualizar paciente", description = "Actualiza los datos de un paciente existente.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Paciente actualizado correctamente"),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "404", description = "Paciente no encontrado")
+    })
+    @PutMapping("/{id}")
+    public ResponseEntity<PacienteResponseDTO> actualizarPaciente(
+            @Parameter(description = "Identificador del paciente", example = "1")
+            @PathVariable ("id") Long id,
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
             @Valid @RequestBody PacienteRequestDTO requestDTO) {
         log.info("Solicitud para actualizar paciente con ID: {}", id);
         return ResponseEntity.ok(pacienteService.actualizarPaciente(id, requestDTO));
     }
 
+<<<<<<< HEAD
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarPaciente(@PathVariable Long id) {
+=======
+    @Operation(summary = "Eliminar paciente", description = "Elimina lógicamente un paciente mediante su identificador.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Paciente eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Paciente no encontrado")
+    })
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarPaciente(
+            @Parameter(description = "Identificador del paciente", example = "1")
+            @PathVariable ("id") Long id) {
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
         log.info("Solicitud para eliminar logicamente paciente con ID: {}", id);
         pacienteService.eliminarPaciente(id);
         return ResponseEntity.noContent().build();
     }
 
+<<<<<<< HEAD
     @GetMapping("/validar-rut")
     public ResponseEntity<Boolean> validarPacientePorRut(@RequestParam String rut) {
+=======
+    @Operation(summary = "Validar paciente por RUT", description = "Valida si existe un paciente registrado con el RUT indicado.")
+    @ApiResponse(responseCode = "200", description = "Resultado de validación obtenido correctamente")
+    @GetMapping("/validar-rut")
+    public ResponseEntity<Boolean> validarPacientePorRut(
+            @Parameter(description = "RUT del paciente", example = "12345678-9")
+            @RequestParam ("rut") String rut) {
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
         log.info("Solicitud para validar paciente por RUT: {}", rut);
         return ResponseEntity.ok(pacienteService.validarPacientePorRut(rut));
     }
 
+<<<<<<< HEAD
     @GetMapping("/validar-email")
     public ResponseEntity<Boolean> validarPacientePorEmail(@RequestParam String email) {
+=======
+    @Operation(summary = "Validar paciente por email", description = "Valida si existe un paciente registrado con el correo electrónico indicado.")
+    @ApiResponse(responseCode = "200", description = "Resultado de validación obtenido correctamente")
+    @GetMapping("/validar-email")
+    public ResponseEntity<Boolean> validarPacientePorEmail(
+            @Parameter(description = "Correo electrónico del paciente", example = "paciente@correo.com")
+            @RequestParam ("email") String email) {
+>>>>>>> a123d07 (docs: add Swagger documentation to pacientes service)
         log.info("Solicitud para validar paciente por email: {}", email);
         return ResponseEntity.ok(pacienteService.validarPacientePorEmail(email));
     }
