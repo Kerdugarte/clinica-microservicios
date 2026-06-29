@@ -44,7 +44,6 @@ class MsDoctoresApplicationTests {
         request.setEmail("maria@clinica.cl");
         request.setTelefono("912345678");
         request.setEspecialidad("Medicina General");
-        request.setRegistroMedico("RM-001");
 
         Doctor doctorGuardado = new Doctor();
         doctorGuardado.setId(1L);
@@ -54,12 +53,10 @@ class MsDoctoresApplicationTests {
         doctorGuardado.setEmail("maria@clinica.cl");
         doctorGuardado.setTelefono("912345678");
         doctorGuardado.setEspecialidad("Medicina General");
-        doctorGuardado.setRegistroMedico("RM-001");
         doctorGuardado.setActivo(true);
 
         when(doctorRepository.existsByRut("11111111-1")).thenReturn(false);
         when(doctorRepository.existsByEmail("maria@clinica.cl")).thenReturn(false);
-        when(doctorRepository.existsByRegistroMedico("RM-001")).thenReturn(false);
         when(doctorRepository.save(any(Doctor.class))).thenReturn(doctorGuardado);
 
         // When
@@ -73,7 +70,6 @@ class MsDoctoresApplicationTests {
         assertEquals("11111111-1", response.getRut());
         assertEquals("maria@clinica.cl", response.getEmail());
         assertEquals("Medicina General", response.getEspecialidad());
-        assertEquals("RM-001", response.getRegistroMedico());
 
         verify(doctorRepository, times(1)).save(any(Doctor.class));
     }
@@ -89,7 +85,6 @@ class MsDoctoresApplicationTests {
         doctor.setEmail("maria@clinica.cl");
         doctor.setTelefono("912345678");
         doctor.setEspecialidad("Medicina General");
-        doctor.setRegistroMedico("RM-001");
         doctor.setActivo(true);
 
         when(doctorRepository.findById(1L)).thenReturn(Optional.of(doctor));
@@ -117,7 +112,6 @@ class MsDoctoresApplicationTests {
         doctor.setEmail("maria@clinica.cl");
         doctor.setTelefono("912345678");
         doctor.setEspecialidad("Medicina General");
-        doctor.setRegistroMedico("RM-001");
         doctor.setActivo(true);
 
         when(doctorRepository.findById(1L)).thenReturn(Optional.of(doctor));
