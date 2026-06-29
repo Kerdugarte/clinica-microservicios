@@ -24,6 +24,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+// Pruebas unitarias de autenticación validadas para Evaluación Parcial 3.
+
 class AuthServiceApplicationTests {
 
     @Mock
