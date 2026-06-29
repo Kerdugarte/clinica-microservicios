@@ -10,11 +10,11 @@ Este proyecto permite administrar el flujo principal de una clínica: usuarios, 
 
 Utilice los siguientes enlaces externos para descargar las versiones listas para ejecución y visualizar la defensa técnica del proyecto:
 
-| Componente                                                  | Descripción                                                                                                                                                                                             | Enlace de Descarga                                                                                                  |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Versión Sin Docker** <br> _(Arranque Nativo)_             | Archivo `.zip` que contiene la carpeta `apps/` con los `.jar` compilados y el script `arrancar-nativo.bat` ordenado por fases. Requiere Java y MySQL configurados en el sistema anfitrión.              | [Descargar ZIP Nativo aquí](ENLACE_A_DRIVE_AQUI)                                                                    |
-| **Versión Con Docker** <br> _(Arranque con Docker Compose)_ | Archivo `.zip` que contiene la carpeta `apps/` con los `.jar`, el archivo `docker-compose.yml` y el script automatizado `arrancar-sistema.bat`. Solo requiere Docker Desktop en la máquina del cliente. | [Descargar ZIP Docker aquí](https://drive.google.com/drive/folders/1WpNGmqLK7fTkxeL0sG0EMWriqBncyZtL?usp=share_link |
-| **Video de Defensa Técnica** <br> _(Evaluación Individual)_ | Enlace directo al video explicativo donde se evidencia el funcionamiento, testing y aporte técnico individual. Duración ideal: 15 minutos. Máximo permitido: 18 minutos.                                | [Ver Video Explicativo aquí](ENLACE_A_VIDEO_AQUI)                                                                   |
+| Componente                                                  | Descripción                                                                                                                                                                                             | Enlace de Descarga                                                                                                   |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Versión Sin Docker** <br> _(Arranque Nativo)_             | Archivo `.zip` que contiene la carpeta `apps/` con los `.jar` compilados y el script `arrancar-nativo.bat` ordenado por fases. Requiere Java y MySQL configurados en el sistema anfitrión.              | [Descargar ZIP Nativo aquí](https://drive.google.com/drive/folders/13x152JpWNsmcG2xqxWB-G4QWQnSiFoHP?usp=share_link) |
+| **Versión Con Docker** <br> _(Arranque con Docker Compose)_ | Archivo `.zip` que contiene la carpeta `apps/` con los `.jar`, el archivo `docker-compose.yml` y el script automatizado `arrancar-sistema.bat`. Solo requiere Docker Desktop en la máquina del cliente. | [Descargar ZIP Docker aquí](https://drive.google.com/drive/folders/1WpNGmqLK7fTkxeL0sG0EMWriqBncyZtL?usp=share_link) |
+| **Video de Defensa Técnica** <br> _(Evaluación Individual)_ | Enlace directo al video explicativo donde se evidencia el funcionamiento, testing y aporte técnico individual. Duración ideal: 15 minutos. Máximo permitido: 18 minutos.                                | [Ver Video Explicativo aquí](ENLACE_A_VIDEO_AQUI)                                                                    |
 
 ---
 
@@ -158,7 +158,7 @@ El sistema utiliza comunicación REST entre microservicios mediante OpenFeign.
 
 ## Pruebas Unitarias
 
-El proyecto contempla pruebas unitarias con JUnit 5 y Mockito para validar la lógica de negocio de los microservicios principales.
+El proyecto contempla pruebas unitarias con JUnit 5 y Mockito para validar la lógica de negocio de los microservicios principales. Se incorporaron pruebas reales en servicios como pacientes, doctores, reservas, pagos, notificaciones, autenticación y usuarios.
 
 Las pruebas deben cubrir:
 
@@ -281,6 +281,7 @@ Para validar el funcionamiento completo del ecosistema:
 - Centralización de rutas.
 - Separación funcional por dominio.
 - Uso de GitHub para control de versiones.
+- Distribución de `.jar` y archivos de ejecución mediante Google Drive, evitando subir binarios al repositorio.
 - Exclusión de archivos binarios y carpetas `target/` mediante `.gitignore`.
 
 ---
@@ -330,8 +331,8 @@ Los archivos `.jar` compilados se distribuyen únicamente mediante enlaces exter
 | Microservicios de negocio        | Implementados                |
 | Comunicación Feign               | Implementada parcialmente    |
 | Swagger/OpenAPI                  | Implementado                 |
-| Pruebas unitarias                | Pendiente de fortalecimiento |
-| Docker Compose                   | Pendiente                    |
-| ZIP Nativo                       | Pendiente                    |
-| ZIP Docker                       | Pendiente                    |
+| Pruebas unitarias                | Implementadas y fortalecidas |
+| Docker Compose                   | Implementado                 |
+| ZIP Nativo                       | Implementado                 |
+| ZIP Docker                       | Implementado                 |
 | Video defensa                    | Pendiente                    |
